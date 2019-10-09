@@ -1,6 +1,6 @@
-const express = require('express');
-const next = require('next');
-const morgan = require('morgan');
+import express from 'express';
+import next from 'next';
+import morgan from 'morgan';
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
