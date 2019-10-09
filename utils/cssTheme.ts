@@ -1,3 +1,7 @@
+interface HexCodes {
+  [index: number]: any;
+}
+
 const theme = {
   color: {
     white: '#EFEFF9',
@@ -6,9 +10,8 @@ const theme = {
     blue: '#225371',
     black: '#282829',
   },
-  navHeight: '50px',
-  changeOpacity: (color, opacity) => {
-    const opacityHexCodes = {
+  changeOpacity: (color: string, opacity: number) => {
+    const opacityHexCodes: HexCodes = {
       0: '00',
       1: '03',
       2: '05',
@@ -87,4 +90,4 @@ const theme = {
   accent: 'darkorange',
 };
 
-export default theme;
+export { theme };

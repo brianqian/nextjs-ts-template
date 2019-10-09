@@ -1,6 +1,6 @@
 import App from 'next/app';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
-import theme from '../public/static/cssTheme';
+import { theme } from '../utils/cssTheme';
 
 const GlobalStyle = createGlobalStyle`
 body, html{
@@ -34,8 +34,10 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
+        <>
+          <GlobalStyle />
+          <Component {...pageProps} />
+        </>
       </ThemeProvider>
     );
   }
